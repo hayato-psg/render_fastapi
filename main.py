@@ -49,7 +49,7 @@ def index():
 
         <ul>
             <li>名前：島野勇斗</li>
-            <li>趣味：スポーツ</li>
+            <li>趣味：スポーツ</li>ß
             <li>好きな食べ物：お肉</li>
         </ul>
 
@@ -58,3 +58,9 @@ def index():
 </html>
     """
     return HTMLResponse(content=html_content, status_code=200)
+
+@app.post("/food")
+async def favorite_food(food: str):
+    return {
+        "response": f"{food}が好きなんですね！私も食べてみたいです。"
+    }
