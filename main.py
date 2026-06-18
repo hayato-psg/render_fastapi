@@ -41,12 +41,20 @@ def omikuji():
 def index():
     html_content = """
     <html>
-        <head>
-            <title>Some HTML in here</title>
-        </head>
-        <body>
-            <h1>Look ma! HTML!</h1>
-        </body>
-    </html>
+    <head>
+        <title>ホームページだよ</title>
+    </head>
+    <body>
+        <h1>私のホームページ</h1>
+
+        <ul>
+            <li>名前：島野勇斗</li>
+            <li>趣味：スポーツ</li>
+            <li>好きな食べ物：お肉</li>
+        </ul>
+
+        <p>ご覧いただきありがとうございます。</p>
+    </body>
+</html>
     """
     return HTMLResponse(content=html_content, status_code=200)
